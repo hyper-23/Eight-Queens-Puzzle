@@ -64,7 +64,7 @@ var qeen = function(N) {
  * @return {Array} 8つの座標位置
  */
 function position(N){
-    let array = [];
+    var array = [];
     while(array.length!=8){
         var min = 0 ;
         var max = N-1 ;
