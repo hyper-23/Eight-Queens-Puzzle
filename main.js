@@ -16,7 +16,7 @@ var qeen = function(N) {
         var x = position(N);
         var y = position(N);
 
-        var flag=true;
+        flag=true;
 
         for(i=0;i<x.length;i++){
             // クイーン配置位置に対角するクイーンが存在しなければ配置
