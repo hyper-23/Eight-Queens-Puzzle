@@ -15,18 +15,6 @@ var qeen = function(N) {
         // 8クイーン配置のX,Y座標をランダム生成
         var x = position(N);
         var y = position(N);
-        
-        // 8クイーン配置のY座標をランダム生成
-        while(y.length!=8){
-            var min = 0 ;
-            var max = N-1 ;
-            var point = Math.floor( Math.random() * (max + 1 - min) ) + min ;
-
-            // Y座標が重複していなければ座標として決定する
-            if(y.indexOf(point)==-1){
-                y.push(point);
-            }
-        }
 
         var flag=true;
 
