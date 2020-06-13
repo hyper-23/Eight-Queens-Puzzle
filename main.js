@@ -39,11 +39,10 @@ var qeen = function(N) {
         }
     }
 
-    chess = chess.join("\n").replace(/,/g," ");
-    return chess.replace(/x/g,"-");
+    return chess.join("\n").replace(/,/g," ").replace(/x/g,"-");
 
     // 確認用（x残し）
-    // return chess;
+    // return chess.join("\n").replace(/,/g," ");
 };
 
 /**
