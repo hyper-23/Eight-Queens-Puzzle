@@ -11,21 +11,10 @@ var qeen = function(N) {
             chess.push(new Array(N).fill("-"));
         }
         
-        var x = [];
-        var y = [];
-
-        // 8クイーン配置のX座標をランダム生成
-        while(x.length!=8){
-            var min = 0 ;
-            var max = N-1 ;
-            var point = Math.floor( Math.random() * (max + 1 - min) ) + min ;
-            
-            // X座標が重複していなければ座標として決定する
-            if(x.indexOf(point)==-1){
-                x.push(point);
-            }
-        }
-
+        // 8クイーン配置のX,Y座標をランダム生成
+        var x = position(N);
+        var y = position(N);
+        
         // 8クイーン配置のY座標をランダム生成
         while(y.length!=8){
             var min = 0 ;
@@ -67,5 +56,20 @@ var qeen = function(N) {
     // 確認用（x残し）
     // return chess;
 };
+
+function position(N){
+    let array = [];
+    while(array.length!=8){
+        var min = 0 ;
+        var max = N-1 ;
+        var point = Math.floor( Math.random() * (max + 1 - min) ) + min ;
+        
+        // 座標が重複していなければ座標として決定する
+        if(array.indexOf(point)==-1){
+            array.push(point);
+        }
+    }
+    return array;
+}
 
 console.log(qeen(8))
