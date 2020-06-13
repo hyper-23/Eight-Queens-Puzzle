@@ -1,4 +1,5 @@
 /**
+ * 8クイーンのチェス盤作成
  * @param {Number} N チェス盤の大きさ
  * @return {String} 合致したクイーンを配置したチェス盤
  */
@@ -57,6 +58,11 @@ var qeen = function(N) {
     // return chess;
 };
 
+/**
+ * 座標位置の作成
+ * @param {Number} N チェス盤の大きさ
+ * @return {Array} 8つの座標位置
+ */
 function position(N){
     let array = [];
     while(array.length!=8){
